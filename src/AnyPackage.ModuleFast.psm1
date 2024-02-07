@@ -93,7 +93,7 @@ class ModuleFastProvider : PackageProvider, IFindPackage, IInstallPackage {
 
     [string] RemoveSpec([string] $spec) {
         $spec = $spec -replace '!', ''
-        
+
         if ($spec.Contains('>=')) {
             return $spec.Split('>=')[0]
         }
